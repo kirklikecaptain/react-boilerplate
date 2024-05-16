@@ -16,13 +16,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
   ],
-  settings: {
-    react: { version: 'detect' },
-    'import/resolver': {
-      typescript: {},
-    },
-  },
   rules: {
     'no-restricted-imports': [
       'error',
@@ -55,5 +50,11 @@ module.exports = {
     '@typescript-eslint/no-empty-function': ['off'],
     '@typescript-eslint/no-explicit-any': ['off'],
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+  },
+  settings: {
+    react: { version: 'detect' },
+    'import/resolver': {
+      typescript: {},
+    },
   },
 };

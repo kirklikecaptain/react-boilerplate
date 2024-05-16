@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import App from './app.tsx';
-import './styles/main.css';
+import '~/styles/main.css';
+
+function App() {
+  return (
+    <div>
+      <h1>React App Boilerplate</h1>
+    </div>
+  );
+}
 
 const root = document.getElementById('root');
 

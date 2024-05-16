@@ -6,7 +6,7 @@ module.exports = {
   },
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  plugins: ['react-refresh', 'prettier'],
   extends: [
     'eslint:recommended',
     'plugin:import/errors',
@@ -16,8 +16,14 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:prettier/recommended',
+    // 'plugin:prettier/recommended',
   ],
+  settings: {
+    react: { version: 'detect' },
+    'import/resolver': {
+      typescript: {},
+    },
+  },
   rules: {
     'no-restricted-imports': [
       'error',
